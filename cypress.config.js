@@ -1,5 +1,11 @@
+const webpackConfig = require('./webpack.config.js');
+
 module.exports = {
-  e2e: {
-    setupNodeEvents(on, config) {},
+  component: {
+    devServer: {
+      framework: 'react',
+      bundler: 'webpack',
+      webpackConfig: webpackConfig
+    },
   },
-}
+};
